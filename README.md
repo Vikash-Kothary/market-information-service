@@ -9,9 +9,11 @@ See our [ROADMAP.md](ROADMAP.md) for more information.
 
 ## Table of Contents
 
-- [Installation](#installation)
 - [Usage](#usage)
+	- [Installation](#installation)
+	- [Running](#running)
 - [Development](#development)
+	- [Building](#building)
 	- [Testing](#testing)
 	- [Releasing](#releasing)
 - [Changelog](#changelog)
@@ -20,21 +22,27 @@ See our [ROADMAP.md](ROADMAP.md) for more information.
 
 <!-- TODO: Project Background -->
 
-## Installation
+## Usage
 
 ### Requirements
 * Linux (Ubuntu)
-* Python 3.4
 
+### Installation
 Run in the terminal: `$ sh script/install.sh`
 
-## Usage
+### Running
 1. Run application: `$ sh script/run.sh`
 2. Call the number
 <!-- TODO: Add phone number -->
 
 ## Development
-Run in the terminal: `$ sh script/develop.sh`
+
+### Requirements
+* Linux (Ubuntu)
+
+### Building
+
+Run in the terminal: `$ sh script/build.sh`
 
 ### Testing
 Run in the terminal: `$ sh script/test.sh`
