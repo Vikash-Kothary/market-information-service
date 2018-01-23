@@ -15,7 +15,6 @@
 ### Python application
 - [ ] Python files
 - [ ] Requirements file
-- [ ] Virtual environment
 
 ### Continous Integration
 - [ ] Setup Circle CI
