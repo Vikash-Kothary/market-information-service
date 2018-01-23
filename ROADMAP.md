@@ -23,7 +23,7 @@
 ### Scripts
 - [ ] Install (From Docker Hub)
 - [ ] Run (From Docker Hub)
-- [ ] Develop (Build + Run local)
+- [x] Develop (Build + Run local)
 - [x] Test
 - [ ] Release (To Github)
 - [ ] Release (To Docker Hub)
