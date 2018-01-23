@@ -13,7 +13,7 @@
 - [x] Docker compose
 
 ### Python application
-- [ ] Python files
+- [x] Python files
 - [x] Requirements file
 
 ### Continous Integration
