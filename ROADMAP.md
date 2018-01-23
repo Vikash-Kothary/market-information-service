@@ -14,7 +14,7 @@
 
 ### Python application
 - [ ] Python files
-- [ ] Requirements file
+- [x] Requirements file
 
 ### Continous Integration
 - [ ] Setup Circle CI
