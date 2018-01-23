@@ -21,3 +21,10 @@
 - [ ] Setup Circle CI
 - [ ] Write failing and passing tests
 
+### Scripts
+- [ ] Install (From Docker Hub)
+- [ ] Run (From Docker Hub)
+- [ ] Develop (Build + Run local)
+- [ ] Test
+- [ ] Release (To Github)
+- [ ] Release (To Docker Hub)
