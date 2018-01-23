@@ -5,8 +5,8 @@
 ### Documentation
 - [x] Readme
 - [x] License
-- [ ] Changelog
-- [ ] Roadmap
+- [x] Changelog
+- [x] Roadmap
 
 ### Python application
 - [ ] Python files

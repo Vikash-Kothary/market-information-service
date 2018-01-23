@@ -8,6 +8,4 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 ### Added
-- README.md
-- CHANGELOG.md
-- MIT License
+- Documentation (README.md, LICENSE, CHANGELOG.md, ROADMAP.md)
