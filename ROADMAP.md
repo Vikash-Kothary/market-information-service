@@ -8,6 +8,10 @@
 - [x] Changelog
 - [x] Roadmap
 
+### Docker support
+- [ ] Dockerfile
+- [ ] Docker compose
+
 ### Python application
 - [ ] Python files
 - [ ] Requirements file
@@ -17,6 +21,3 @@
 - [ ] Setup Circle CI
 - [ ] Write failing and passing tests
 
-### Docker support
-- [ ] Dockerfile
-- [ ] Docker compose
