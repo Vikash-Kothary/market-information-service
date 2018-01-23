@@ -17,13 +17,13 @@
 - [x] Requirements file
 
 ### Continous Integration
-- [ ] Setup Circle CI
+- [x] Setup Travis CI
 - [ ] Write failing and passing tests
 
 ### Scripts
 - [ ] Install (From Docker Hub)
 - [ ] Run (From Docker Hub)
 - [ ] Develop (Build + Run local)
-- [ ] Test
+- [x] Test
 - [ ] Release (To Github)
 - [ ] Release (To Docker Hub)
