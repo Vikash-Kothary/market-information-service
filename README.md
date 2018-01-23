@@ -26,6 +26,7 @@ See our [ROADMAP.md](ROADMAP.md) for more information.
 
 ### Requirements
 * Linux (Ubuntu)
+* Docker
 
 ### Installation
 Run in the terminal: `$ sh script/install.sh`
@@ -39,6 +40,8 @@ Run in the terminal: `$ sh script/install.sh`
 
 ### Requirements
 * Linux (Ubuntu)
+* Docker
+* Docker Compose
 
 ### Building
 

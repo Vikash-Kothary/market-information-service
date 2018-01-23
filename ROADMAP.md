@@ -9,8 +9,8 @@
 - [x] Roadmap
 
 ### Docker support
-- [ ] Dockerfile
-- [ ] Docker compose
+- [x] Dockerfile
+- [x] Docker compose
 
 ### Python application
 - [ ] Python files
