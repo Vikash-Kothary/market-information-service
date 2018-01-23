@@ -3,7 +3,7 @@
 ## Project Setup
 
 ### Documentation
-- [ ] Readme
+- [x] Readme
 - [x] License
 - [ ] Changelog
 - [ ] Roadmap
