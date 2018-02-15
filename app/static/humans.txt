@@ -1,0 +1,16 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Vikash Kothary -- Maintainer -- @VikashKothary
+
+# THANKS
+
+    Dr Jamie Barras
+    King's College London
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5
+    Apache Server Configs, jQuery, Modernizr, Normalize.css
