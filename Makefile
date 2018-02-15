@@ -1,24 +1,24 @@
 install:
-	@echo 'download latest docker image'
+	@echo 'Download latest docker image'
 
 build:
-	@echo 'build local dockerfile'
-	docker build -t info_service:0.0.0 .
+	@echo 'Build docker image from Dockerfile'
+	docker build -q -t info_service:latest .
 
 run: kill
-	@echo 'run dockerfile'
-	docker run --rm -d --name info_service -p 5000:5000 info_service:0.0.0
+	@echo 'Run docker image as a container'
+	docker run --rm -d --name info_service -p 5000:5000 info_service:latest
 
 kill:
-	@echo 'kill service if running'
+	@echo 'Kill docker container if running'
 	docker kill info_service || true
 
-debug: build kill run
-	@echo 'Build and run local service'
+debug:
+	@echo 'Build and run local container'
 	docker exec -it info_service sh
 
 tests: build kill run
-	@echo 'run tests'
+	@echo 'Run tests'
 	docker exec -it info_service python -m unittest
 
 release:
@@ -28,5 +28,5 @@ release:
 	@echo 'Release on Dockerhub'
 
 clear-docker:
-	@echo 'clear all docker images'
-	sh scripts/clear_docker.sh
+	@echo 'Clear all docker images'
+	sh scripts/clear_docker.sh > /dev/null
