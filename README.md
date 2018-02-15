@@ -29,10 +29,10 @@ See our [ROADMAP.md](ROADMAP.md) for more information.
 * Docker
 
 ### Installation
-Run in the terminal: `$ sh script/install.sh`
+Run in the terminal: `$ make install`
 
 ### Running
-1. Run application: `$ sh script/run.sh`
+1. Run application: `$ make run`
 2. Call the number
 <!-- TODO: Add phone number -->
 
@@ -44,14 +44,13 @@ Run in the terminal: `$ sh script/install.sh`
 * Docker Compose
 
 ### Building
-
-Run in the terminal: `$ sh script/build.sh`
+Run in the terminal: `$ make build`
 
 ### Testing
-Run in the terminal: `$ sh script/test.sh`
+Run in the terminal: `$ make test`
 
 ### Releasing
-Run in the terminal: `$ sh script/release.sh`
+Run in the terminal: `$ make release`
 
 <!-- TODO: Add Contributing and Code of Conduct -->
 
