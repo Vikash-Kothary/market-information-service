@@ -17,9 +17,10 @@ class TestApp(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test(self):
+    def test_flask_set_up(self):
         response = self.app.get('/success')
         self.assertEqual(response.data, b"App is working")
+
 
 if __name__ == '__main__':
     import doctest
