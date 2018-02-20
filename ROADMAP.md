@@ -49,3 +49,17 @@
 - [ ] Mock json query response
 - [ ] Represent the response as a sentence
 
+## Memory v0.1.0
+
+### User Sessions
+- [ ] User model
+- [ ] Mock phone numbers
+- [ ] Remember currency and location of user 
+- [ ] Store search history
+
+### Privacy
+- [ ] Store phone number as hash
+
+## Phone v0.2.0 
+
+
