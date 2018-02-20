@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-app.py - 
+app.py - Creates the flask web server
 """
 from flask import Flask
 
@@ -10,6 +10,7 @@ app.debug = True
 
 @app.route("/success")
 def success():
+    """Check if the Flask web server is working"""
     return "App is working"
 
 if __name__ == "__main__":

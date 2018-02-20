@@ -8,6 +8,7 @@ from app import app
 
 @app.route('/')
 def root():
+    """Root for website"""
     return "Market Information Service"
 
 if __name__ == "__main__":

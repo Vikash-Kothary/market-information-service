@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-main.py - 
+main.py - Run the complete application
 """
 
 from app import app
