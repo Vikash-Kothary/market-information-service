@@ -16,6 +16,7 @@ See our [ROADMAP.md](ROADMAP.md) for more information.
     - [Building](#building)
     - [Testing](#testing)
     - [Releasing](#releasing)
+    - [Debugging](#debugging)
 - [Changelog](#changelog)
 - [Authors](#authors)
     - [Achknowledgements](#achknowledgements)
@@ -51,6 +52,9 @@ Run in the terminal: `$ make test`
 
 ### Releasing
 Run in the terminal: `$ make release`
+
+### Debugging
+Run in the terminal: `$ make debug`
 
 <!-- TODO: Add Contributing and Code of Conduct -->
 
