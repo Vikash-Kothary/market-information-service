@@ -68,11 +68,11 @@ All notable changes are documented in [CHANGELOG.md](CHANGELOG.md). For past ava
 
 ## Authors
 
-**Vikash Kothary** - Developer - [@VikashKothary](https://github.com/VikashKothary)
+**Vikash Kothary** -- Developer -- [@VikashKothary](https://github.com/VikashKothary)
 
 ### Achknowledgements
-* Dr Jamie Barras - Supervisor
-* King's College London - University
+* Dr Jamie Barras -- Supervisor
+* King's College London -- University
 <!-- TODO: Add contact information -->
 
 <!-- TODO: Add Built with -->
