@@ -19,6 +19,7 @@ class TestApp(unittest.TestCase):
 
     def test_flask_set_up(self):
         response = self.app.get('/success')
+        self.assertEqual(response.status_code, 200)
         self.assertEqual(response.data, b"App is working")
 
     def test_static_files(self):
