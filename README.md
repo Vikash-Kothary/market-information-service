@@ -10,12 +10,12 @@ See our [ROADMAP.md](ROADMAP.md) for more information.
 ## Table of Contents
 
 - [Usage](#usage)
-	- [Installation](#installation)
-	- [Running](#running)
+    - [Installation](#installation)
+    - [Running](#running)
 - [Development](#development)
-	- [Building](#building)
-	- [Testing](#testing)
-	- [Releasing](#releasing)
+    - [Building](#building)
+    - [Testing](#testing)
+    - [Releasing](#releasing)
 - [Changelog](#changelog)
 - [Authors](#authors)
     - [Achknowledgements](#achknowledgements)
