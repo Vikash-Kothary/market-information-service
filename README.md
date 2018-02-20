@@ -18,6 +18,7 @@ See our [ROADMAP.md](ROADMAP.md) for more information.
     - [Releasing](#releasing)
     - [Debugging](#debugging)
 - [Changelog](#changelog)
+- [Support](#support)
 - [Authors](#authors)
     - [Achknowledgements](#achknowledgements)
 
@@ -60,6 +61,10 @@ Run in the terminal: `$ make debug`
 
 ## Changelog
 All notable changes are documented in [CHANGELOG.md](CHANGELOG.md). For past available versions, see the [tags on this repository](https://github.com/VikashKothary/market-information-service/tags).
+
+## Support
+* [User Manual]()
+* [Frequently Asked Questions]()
 
 ## Authors
 
