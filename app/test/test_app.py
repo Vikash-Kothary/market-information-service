@@ -21,6 +21,10 @@ class TestApp(unittest.TestCase):
         response = self.app.get('/success')
         self.assertEqual(response.data, b"App is working")
 
+    def test_static_files(self):
+        response = self.app.get('/robots.txt')
+        self.assertEqual(response.status_code, 200)
+
 
 if __name__ == '__main__':
     import doctest
