@@ -26,6 +26,9 @@ release:
 	@echo 'Update changelog'
 	@echo 'Release on Github'
 	@echo 'Release on Dockerhub'
+	docker login
+	docker tag market-information-service VikashKothary/market-information-service:0.0.0
+	docker push VikashKothary/market-information-service:0.0.0
 
 clear-docker:
 	@echo 'Clear all docker images'

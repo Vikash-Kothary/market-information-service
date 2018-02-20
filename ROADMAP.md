@@ -26,7 +26,7 @@
 - [x] Develop (Build + Run local)
 - [x] Test
 - [ ] Release (To Github)
-- [ ] Release (To Docker Hub)
+- [x] Release (To Docker Hub)
 
 ## Minimum Viable Product v0.0.0
 
