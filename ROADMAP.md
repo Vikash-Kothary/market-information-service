@@ -36,7 +36,7 @@
 
 ### Natural Language Processing
 > https://www.analyticsvidhya.com/blog/2017/01/ultimate-guide-to-understand-implement-natural-language-processing-codes-in-python/
-- [ ] Define a model for the data queries/reponses
+- [x] Define a model for the data queries/reponses
 - [ ] Setup NLTK
 - [ ] Noice Removal
 - [ ] Lexicon Normalisation
@@ -52,7 +52,7 @@
 ## Memory v0.1.0
 
 ### User Sessions
-- [ ] User model
+- [x] User model
 - [ ] Mock phone numbers
 - [ ] Remember currency and location of user 
 - [ ] Store search history
