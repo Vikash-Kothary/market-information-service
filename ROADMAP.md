@@ -30,9 +30,9 @@
 
 ## Minimum Viable Product v0.0.0
 
-### Web Speech API
-- [ ] Speech Recognition
-- [ ] Speech Synthesis
+### UI
+- [ ] Input text field
+- [ ] Output text area
 
 ### Natural Language Processing
 > https://www.analyticsvidhya.com/blog/2017/01/ultimate-guide-to-understand-implement-natural-language-processing-codes-in-python/
@@ -49,7 +49,13 @@
 - [ ] Mock json query response
 - [ ] Represent the response as a sentence
 
-## Memory v0.1.0
+## Speech v0.1.0
+
+### Web Speech API
+- [ ] Speech Recognition
+- [ ] Speech Synthesis
+
+## Memory v0.2.0
 
 ### User Sessions
 - [x] User model
@@ -60,6 +66,7 @@
 ### Privacy
 - [ ] Store phone number as hash
 
-## Phone v0.2.0 
+## Phone v0.3.0 
+
 
 
