@@ -23,9 +23,9 @@ class TestModels(unittest.TestCase):
         self.assertEqual(product_zero.unit, 'pcs')
         self.assertEqual(product_zero.price, 5.00)
         self.assertEqual(product_zero.currency_code, 'GBP')
-        self.assertEqual(product_zero.dateCreated, now)
+        self.assertEqual(product_zero.date_created, now)
 
-        expected_repr = '<Product(product_id=0, name=Banana, quantity=5, unit=pcs, price=5.00, currency_code=GBP, dateCreated=' + str(now) + ')>'
+        expected_repr = '<Product(product_id=0, name=Banana, quantity=5, unit=pcs, price=5.00, currency_code=GBP, date_created=' + str(now) + ')>'
         self.assertEqual(product_zero.__repr__(), expected_repr)
         expected_str = '5 pcs of Banana costs 5.00 GBP on ' + str(now)
         self.assertEqual(product_zero.__str__(), expected_str)

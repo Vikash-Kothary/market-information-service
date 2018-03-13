@@ -18,17 +18,17 @@ class Product():
         self.unit = unit
         self.price = price
         self.currency_code = currency
-        self.dateCreated = date
+        self.date_created = date
 
     def __repr__(self):
         """Return an unambiguous representation of a product"""
-        return '<Product(product_id={0}, name={1}, quantity={2}, unit={3}, price={4:.2f}, currency_code={5}, dateCreated={6})>'.format(
-            self.product_id, self.name, self.quantity, self.unit, self.price, self.currency_code, self.dateCreated)
+        return '<Product(product_id={0}, name={1}, quantity={2}, unit={3}, price={4:.2f}, currency_code={5}, date_created={6})>'.format(
+            self.product_id, self.name, self.quantity, self.unit, self.price, self.currency_code, self.date_created)
 
     def __str__(self):
         """Returns a human-readable representation of a product"""
         return '{0} {1} of {2} costs {3:.2f} {4} on {5}'.format(
-            self.quantity, self.unit, self.name, self.price, self.currency_code, self.dateCreated)
+            self.quantity, self.unit, self.name, self.price, self.currency_code, self.date_created)
 
 
 class User():
