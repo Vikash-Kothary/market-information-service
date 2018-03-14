@@ -37,7 +37,7 @@
 ### Natural Language Processing
 > https://www.analyticsvidhya.com/blog/2017/01/ultimate-guide-to-understand-implement-natural-language-processing-codes-in-python/
 - [x] Define a model for the data queries/reponses
-- [ ] Setup NLTK
+- [x] Setup NLTK
 - [ ] Noice Removal
 - [ ] Lexicon Normalisation
 - [ ] Object Standardisation
