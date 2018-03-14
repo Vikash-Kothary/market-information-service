@@ -3,7 +3,7 @@ version: '3'
 services:
 
   app:
-    container_name: market-information-service
+    container_name: info_service
     build: ./
     ports:
       - "5000:5000"

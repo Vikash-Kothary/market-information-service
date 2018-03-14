@@ -13,11 +13,15 @@ kill:
 	@echo 'Kill docker container if running'
 	docker kill info_service || true
 
+develop: kill
+	@echo 'Run docker container with latest file changes'
+	docker-compose up -d
+
 debug:
 	@echo 'Build and run local container'
 	docker exec -it info_service sh
 
-tests: build kill run
+tests: develop
 	@echo 'Run tests'
 	docker exec -it info_service python -m unittest
 
