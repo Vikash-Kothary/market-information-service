@@ -31,13 +31,19 @@
 ## Minimum Viable Product v0.0.0
 
 ### UI
+- [ ] Unit Tests Framework
 - [ ] Input text field
-- [ ] Output text area
+- [ ] Output text area 
+
+### Chatbot
+- [ ] Greeting
+- [ ] Talkback
 
 ### Natural Language Processing
 > https://www.analyticsvidhya.com/blog/2017/01/ultimate-guide-to-understand-implement-natural-language-processing-codes-in-python/
 - [x] Define a model for the data queries/reponses
 - [x] Setup NLTK
+- [ ] Tokenise
 - [ ] Noice Removal
 - [ ] Lexicon Normalisation
 - [ ] Object Standardisation
