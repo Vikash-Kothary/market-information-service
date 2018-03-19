@@ -9,3 +9,4 @@ services:
       - "5000:5000"
     volumes:
       - "./app:/app"
+      - "./nltk_data:/usr/share/nltk_data"
