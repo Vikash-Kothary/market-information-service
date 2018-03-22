@@ -10,5 +10,13 @@ class NLP():
     def __init__(self):
         pass
 
+    def to_boolean(self, sentence=None):
+        if sentence is None:
+            sentence = input()
+        if sentence == 'y':
+            return True
+        else:
+            return False
+
 if __name__ == '__main__':
     pass
