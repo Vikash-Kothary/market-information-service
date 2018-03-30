@@ -18,7 +18,6 @@
 
 ### Continous Integration
 - [x] Setup Travis CI
-- [ ] Write failing and passing tests
 
 ### Scripts
 - [ ] Install (From Docker Hub)
