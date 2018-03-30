@@ -26,6 +26,7 @@
 - [x] Test
 - [ ] Release (To Github)
 - [x] Release (To Docker Hub)
+- [ ] Release (To Heroku)
 
 ## Minimum Viable Product v0.0.0
 
