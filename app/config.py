@@ -2,6 +2,7 @@
 """  
 config.py - Configuration for Flask application  
 """
+
 import os
 
 
@@ -33,7 +34,7 @@ class DevelopmentConfig(BaseConfig):
 
 class TestingConfig(BaseConfig):
     """Configuration when running tests"""
-    DEBUG = True
+    DEBUG = False
     TESTING = True
     # Test Creden
     ACCOUNT_SID = ''
