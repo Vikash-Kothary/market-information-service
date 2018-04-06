@@ -10,3 +10,5 @@ services:
     volumes:
       - "./app:/app"
       - "./nltk_data:/usr/share/nltk_data"
+    environment:
+      - ENVIRONMENT=development

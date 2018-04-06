@@ -2,10 +2,27 @@
 """
 app.py - Creates the flask web server
 """
+
+import os
+
 from flask import Flask
 
-app = Flask(__name__, static_folder='static', static_url_path='')
-app.debug = True
+
+def create_app(environment=None):
+    if environment is None:
+        environment = os.getenv('ENVIRONMENT', 'production')
+    app = Flask(__name__, static_folder='static', static_url_path='')
+    config = {
+        "development": "config.DevelopmentConfig",
+        "testing": "config.TestingConfig",
+        "production": "config.ProductionConfig",
+    }
+    app.config.from_object(config[environment])
+    # app.config.from_pyfile('config.cfg', silent=True)
+    return app
+
+
+app = create_app()
 
 
 @app.route("/success")

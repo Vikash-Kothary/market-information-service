@@ -3,10 +3,11 @@
 main.py - Run the complete application
 """
 
-from app import app
+from app import create_app
 from views import views
 from models import Product, User
 
+app = create_app()
 app.register_blueprint(views)
 
 if __name__ == '__main__':
