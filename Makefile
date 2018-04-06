@@ -13,6 +13,10 @@ kill:
 	@echo 'Kill docker container if running'
 	docker kill info_service || true
 
+develop-build: kill
+	@echo 'Run docker container with latest file changes'
+	docker-compose build
+
 develop: kill
 	@echo 'Run docker container with latest file changes'
 	docker-compose up -d
