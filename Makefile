@@ -28,6 +28,7 @@ debug:
 tests: develop
 	@echo 'Run tests'
 	docker exec -it info_service python -m unittest
+	#docker exec -it info_service nose2 -v
 
 release:
 	@echo 'Release new version'
