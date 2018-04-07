@@ -29,6 +29,8 @@ tests: develop
 	@echo 'Run tests'
 	docker exec -it info_service python -m unittest
 	#docker exec -it info_service nose2 -v
+	#docker exec -it info_service coverage run app/test/*.py  
+	#docker exec -it info_service coverage html app/*.py  
 
 release:
 	@echo 'Release new version'
