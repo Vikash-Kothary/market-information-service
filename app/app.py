@@ -17,6 +17,8 @@ def create_app(environment=None):
         "testing": "config.TestingConfig",
         "production": "config.ProductionConfig",
     }
+    if environment not in config:
+        raise ValueError('Not a valid environment name')
     app.config.from_object(config[environment])
     # app.config.from_pyfile('config.cfg', silent=True)
     return app
