@@ -3,89 +3,126 @@
 chatbot.py - Handles small talk with user
 """
 
+import datetime
+from flask import Blueprint, jsonify
+
 from models import User, Product
-from nlp import NLP
+
+chatbot = Blueprint("chatbot", __name__)
 
 
-class Chatbot():
-    """Generate reponses to user inputs"""
+@chatbot.route('/greeting/')
+@chatbot.route('/greeting/<user>')
+def greeting(user=None):
+    response = []
+    if user is None:
+        response.append('Welcome to the Market Information Service!')
+        response.append(
+            'Have you use this service before? If not, I can tell you a bit more out us.')
+        # if self.speech.to_boolean() == True:
+        #     self.on_board()
+    else:
+        response.append('This is the Market Information Service!')
+        response.append('Welcome back {}!'.format(self.user.name))
+        response.append('What can we help you with?')
+    return jsonify(response)
 
-    def __init__(self, user=None):
-        if user is None:
-            user = User()
-        self.user = user
-        self.speech = NLP()
-        self.run()
 
-    def run(self):
-        self.greeting()
-        while True:
-            self.observations()
-            query = self.assumptions()
-            self.service(query)
+@chatbot.route('/on_board')
+def on_board(self):
+    """ Explain service to new users """
+    response = []
+    response.append(
+        'The Market Information Service provides price transparency to farmers all over Africa.')
+    response.append('Ask us for the price of any produce and we can find it out for you.')
+    response.append('We provide prices specific to your location and currency.')
+    response.append('Is it ok if we store your data to improve your service with us.')
+    # self.save_user = self.speech.to_boolean()
+    response.append('Start by asking us the price of any produce.')
+    return jsonify(response)
 
-    def greeting(self):
-        if self.user.name is None:
-            print('Welcome to the Market Information Service!')
-            print('Have you use this service before? If not, I can tell you a bit more out us.')
-            if self.speech.to_boolean() == True:
-                self.on_board()
-        else:
-            print('This is the Market Information Service!')
-            print('Welcome back {}!'.format(self.user.name))
-            print('What can we help you with?')
 
-    def on_board(self):
-        """ Explain service to new users """
-        print('The Market Information Service provides price transparency to farmers all over Africa.')
-        print('Ask us for the price of any produce and we can find it out for you.')
-        print('We provide prices specific to your location and currency.')
-        print('Is it ok if we store your data to improve your service with us.')
-        self.save_user = self.speech.to_boolean()
-        print('Start by asking us the price of any produce.')
+@chatbot.route('/end_call')
+@chatbot.route('/end_call/<user>')
+def end_call(user=None):
+    """End call"""
+    response = []
+    response.append('Thank you for calling the Market Information Service!')
+    if user is not None:
+        response.append('Have a nice day, {}.'.format(user.name))
+    else:
+        response.append('Have a nice day.')
+    return jsonify(response)
 
-    def set_up_name(self):
-        if self.user.name is None:
-            print('What is your name?')
-            name_check = self.speech.to_name()
-            print('Is that {}'.format(name_check))
-            if self.speech.to_boolean() == True:
-                self.user.name = name_check
 
-    def set_up_location_currency(self):
-        if self.user.location is not None:
-            print('Is this price for {}'.format(self.user.location))
-        else:
-            print('What country are you in?')
-            self.user.location = input()
-        if self.user.currency_code is not None:
-            print('Do you want the price in {}'.format(self.user.currency))
-        else:
-            print('What currency would you like the price in?')
-            self.user.currency_code = input()
+@chatbot.route('/learn/name/<user>')
+def learn_name(user=None):
+    response = []
+    if user is None:
+        response.append('What is your name?')
+        # name_check = self.speech.to_name()
+        # print('Is that {}'.format(name_check))
+        # if self.speech.to_boolean() == True:
+        #    user.name = name_check
+    return jsonify(response)
 
-    def observations(self):
-        """ Gather/Comment on known knowledge """
-        pass
 
-    def assumptions(self):
-        """ Predict query """
-        assume = 'the price of a banana'
-        print('Would you like to know {}?'.format(assume))
-        print('If not, then please state what you would like to query.')
-        if self.speech.to_boolean() == True:
-            return 'I would like {}'.format(assume)
-        return None
+@chatbot.route('/learn/location/<user>')
+def learn_location(user):
+    """ """
+    response = []
+    if user.location is not None:
+        response.append('Is this price for {}'.format(self.user.location))
+    else:
+        response.append('What country are you in?')
+        user.location = input()
+    return jsonify(response)
 
-    def service(self, query):
-        print('Let me find out the price of a banana for you')
-        self.set_up_location_currency()
-        # TODO: get price from database
-        import datetime
-        result = Product(id=0, name='Banana', quantity=5,
-                         unit='pcs', price=5.00, currency='GBP', date=datetime.datetime.now())
-        self.user.history.append(result)
-        print(self.user.history)
+
+@chatbot.route('/learn/currency/<user>')
+def learn_currency(user):
+    """ """
+    response = []
+    if user.currency_code is not None:
+        response.append('Do you want the price in {}'.format(self.user.currency))
+    else:
+        response.append('What currency would you like the price in?')
+        # user.currency_code = input()
+    return jsonify(response)
+
+
+@chatbot.route('/query/<user>')
+def assumption(user):
+    """ Predict query """
+    response = []
+    assume = 'the price of a banana'
+    response.append('Would you like to know {}?'.format(assume))
+    response.append('If not, then please state what you would like to query.')
+    # if self.speech.to_boolean() == True:
+    #    return 'I would like {}'.format(assume)
+    # return None
+    return jsonify(response)
+
+
+@chatbot.route('/query/<query>')
+@chatbot.route('/query/<query>/user/<user>/')
+def service(query, user=None):
+    """ Resolve query """
+    response = []
+    response.append('Let me find out the price of a {} for you'.format(query))
+    # self.set_up_location_currency()
+    # TODO: get price from database
+    result = Product(id=0, name='Banana', quantity=5, unit='pcs', price=5.00,
+                     currency='GBP', date=datetime.datetime.now())
+    if user is not None:
+        user.history.append(result)
+    response.append(result.__str__)
+    return jsonify(response)
+
+
+def observations():
+    """ Gather/Comment on known knowledge """
+    pass
 
 if __name__ == '__main__':
-    bot = Chatbot()
+    pass

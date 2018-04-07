@@ -3,17 +3,29 @@
 test_app.py - Tests for nlp.py
 """
 
-from chatbot import Chatbot
+from app import create_app as _create_app
+from chatbot import chatbot
 
-import unittest
+from flask_testing import TestCase
 
 
-class TestChatbot(unittest.TestCase):
+class TestChatbot(TestCase):
+
+    def create_app(self):
+        app = _create_app(environment='testing')
+        app.register_blueprint(chatbot)
+        return app
 
     def setUp(self):
-        self.chatbot = Chatbot()
+        pass
 
     def tearDown(self):
+        pass
+
+    def test_greeting(self):
+        pass
+
+    def test_on_board(self):
         pass
 
 
