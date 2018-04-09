@@ -20,6 +20,7 @@ develop-build: kill
 develop: kill
 	@echo 'Run docker container with latest file changes'
 	docker-compose up -d
+	#@echo $(curl -s $(docker port ngrok_tunnel 4040)/api/tunnels | grep -P "http://.*?ngrok.io" -oh)
 
 debug:
 	@echo 'Build and run local container'
