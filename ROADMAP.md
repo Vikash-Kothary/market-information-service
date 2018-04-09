@@ -26,7 +26,7 @@
 - [x] Test
 - [ ] Release (To Github)
 - [x] Release (To Docker Hub)
-- [ ] Release (To Heroku)
+- [x] Release (To Heroku)
 
 ### Ngrok
 - [ ] Ngrok docker
