@@ -6,3 +6,5 @@ twilio==6.11.0
 nose2==0.6.0 
 coverage==4.2 
 flask-testing==0.4.2
+flask-sqlalchemy==2.1
+sqlalchemy
