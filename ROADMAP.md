@@ -15,6 +15,8 @@
 ### Python application
 - [x] Python files
 - [x] Requirements file
+- [ ] Make PORT and HOST environemnt variables
+- [ ] Run using flask command
 
 ### Continous Integration
 - [x] Setup Travis CI
@@ -29,7 +31,7 @@
 - [x] Release (To Heroku)
 
 ### Ngrok
-- [ ] Ngrok docker
+- [x] Ngrok docker
 
 ## Minimum Viable Product v0.0.0
  
@@ -38,9 +40,9 @@
 > https://damyanon.net/post/flask-series-testing/
 > https://pythonhosted.org/Flask-Testing/
 > https://github.com/colingorrie/flask-boilerplate/blob/master/tests/__init__.py
-- [ ] Unit Tests Framework
-- [ ] Input text field
-- [ ] Output text area 
+- [x] Unit Tests Framework
+- [x] Input text field
+- [x] Output text area 
 
 ### Natural Language Understanding
 > https://www.analyticsvidhya.com/blog/2017/01/ultimate-guide-to-understand-implement-natural-language-processing-codes-in-python/
@@ -59,59 +61,60 @@
 ## Minimum Viable Product v0.1.0
 
 ### Natural Language Generation
-- [ ] Mock json query response
-- [ ] Represent the response as a sentence
-
-## Phone v0.2.0 
-
-### Twilio
-- [ ] Setup Twilio
-- [ ] Test receive phone call
-- [ ] Test receive speech through phone call
-- [ ] Test reply speech through phone call
-- [ ] Test recognise phone number
-- [ ] Receive multiple phone calls at the same time
-- [ ] Add to queue of waiting calls?
-
-### SMS
-- [ ] Mock send SMS to mFarm
-
-## Chatbot v0.3.0
-
-### Chatbot
 > https://medium.com/@allanmeriales/a-simple-chatbot-using-nltk-chat-640456dcdf72
 > https://chatbotsmagazine.com/delbot-nlp-python-bot-1a46d865e38b
 > https://apps.worldwritable.com/tutorials/chatbot/
+- [ ] Mock json query response
+- [ ] Represent the response as a sentence
+- [ ] Mock send to mFarm
+- [ ] convert mFarm into sentence
 - [x] Greeting
-- [x] Talkback (because it may have misheard the speech)
+- [x] On board
+- [-] Talkback (because it may have misheard the speech)
 - [ ] Ignore filler words such as 'umm' and 'hmm'
+
+## Phone v0.2.0 
+> https://www.twilio.com/docs/voice/tutorials/automated-survey-python-flask
+> https://www.twilio.com/console/phone-numbers/incoming
+
+### Twilio
+- [x] Setup Twilio
+- [x] Test receive phone call
+- [x] Test receive speech through phone call
+- [x] Test reply speech through phone call
+- [x] Test recognise phone number
+- [x] Receive multiple phone calls at the same time
+- [-] Add to queue of waiting calls?
+
+### SMS
+- [x] Mock send SMS to mFarm
+
 
 ## Memory v0.4.0
 
 ### User Sessions
 - [x] User model
-- [ ] Mock phone numbers
 - [ ] Remember user's name
 - [ ] Remember currency and location of user 
 - [ ] Store search history
 - [ ] Ask for more information if not enough given
 
 ### Privacy
-- [ ] Store phone number as hash
+- [x] Store phone number as hash
 
 
 ## Future v0.5.0
 
 
 ### Extensions
-- [ ] Multiple queries in one call
-- [ ] Multiple queries in one sentence
-- [ ] Edit the query (correct themselves)
+- [-] Multiple queries in one call
+- [-] Multiple queries in one sentence
+- [-] Edit the query (correct themselves)
 
 ### Tests
 - [ ] Test response time
 
 ### Web Speech API
-- [ ] Speech Recognition
-- [ ] Test receive
-- [ ] Speech Synthesis
+- [-] Speech Recognition
+- [-] Test receive
+- [-] Speech Synthesis

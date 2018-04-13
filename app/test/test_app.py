@@ -11,15 +11,19 @@ import app
 class TestApp(TestCase):
 
     def create_app(self):
-        return app.create_app(environment='testing')
+        return app._create_app(environment='testing')
 
     def setUp(self):
-        app = self.create_app()
-        self.client = app.test_client()
+        self.app = self.create_app()
+        with self.app.app_context():
+            self.db = app._create_db(self.app)
+        self.client = self.app.test_client()
         self.client.testing = True
 
     def tearDown(self):
-        pass
+        with self.app.app_context():
+            self.db.session.remove()
+            self.db.drop_all()
 
     def test_flask_set_up(self):
         """ Test flask successfully set up """
@@ -35,7 +39,6 @@ class TestApp(TestCase):
     def test_static_files(self):
         response = self.client.get('/robots.txt')
         self.assertEqual(response.status_code, 200)
-
 
 if __name__ == '__main__':
     import unittest

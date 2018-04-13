@@ -7,7 +7,8 @@ build:
 
 run: kill
 	@echo 'Run docker image as a container'
-	docker run --rm -d --name info_service -p 5000:5000 info_service:latest
+	#docker run --rm -d --name info_service -p 5000:5000 info_service:latest
+	docker-compose up -d
 
 kill:
 	@echo 'Kill docker container if running'
@@ -19,14 +20,14 @@ develop-build: kill
 
 develop: kill
 	@echo 'Run docker container with latest file changes'
-	docker-compose up -d
+	docker-compose up
 	#@echo $(curl -s $(docker port ngrok_tunnel 4040)/api/tunnels | grep -P "http://.*?ngrok.io" -oh)
 
 debug:
 	@echo 'Build and run local container'
 	docker exec -it info_service sh
 
-tests: develop
+tests: run
 	@echo 'Run tests'
 	docker exec -it info_service python -m unittest
 	#docker exec -it info_service nose2 -v
