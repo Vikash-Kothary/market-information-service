@@ -19,7 +19,7 @@ def tokenize(text):
 
 
 def remove_noise(tokens):
-    noise_list = {'I', 'would', 'like', 'price', 'kilogram'}
+    noise_list = {'I', 'would', 'like', 'price', 'kilogram', 'kg'}
     tokens_without_noise = tokens
     for token in tokens:
         if token in stopwords.words('english') or token in noise_list:
@@ -49,8 +49,9 @@ def lexicon_normalization(tokens):
 
 
 def to_boolean(speech):
+    speech = speech.lower()
     for token in tokenize(speech):
-        if token in synonyms('yes') or token in synonyms('agree'):
+        if token == 'yes' or token in synonyms('yes') or token in synonyms('agree'):
             return True
     for token in tokenize(speech) or token in synonyms('disagree'):
         if token == 'no':
@@ -68,8 +69,10 @@ def to_noun(speech):
         if tag[1] == 'NN':
             return tag[0]
     for token in tokens:
-        if token == 'bananas' or token == 'mangos':
+        common_tokens = ['bananas', 'mangos', 'shillings', 'pounds']
+        if token in common_tokens or len(tokens) == 1:
             return token
+    return ''
 
 
 def to_result(product):
@@ -82,7 +85,6 @@ def to_assume(product):
 
 def to_query(user_id, speech):
     user = User.query.get(user_id)
-
     product = Product()
     product.name = to_noun(speech)
     product.quantity = 1
@@ -94,7 +96,8 @@ def to_query(user_id, speech):
         if product.currency == '' and user.currency != '':
             product.currency = user.currency
     # Mock existing data
-    db.save(product)
+    user.history.append(product)
+    db.save()
     return product
 
 

@@ -26,6 +26,7 @@ def _create_app(environment=None):
 def _create_db(app):
     def _init_db():
         with app.app_context():
+            db.drop_all()
             db.create_all()
 
     def _save_util(user=None):

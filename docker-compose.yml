@@ -2,17 +2,17 @@ version: '3'
 
 services:
 
-  ngrok:
-    container_name: ngrok_tunnel
-    image: wernight/ngrok
-    ports:
-      - "4040:4040"
-    links:
-      - app
-    environment:
-      - NGROK_AUTH=3fVv5QDD6Wh5jDUg7CtEg_6tsUV7Nz5gy1M6vZA7myF
-      - NGROK_PORT=app:5000
-      - NGROK_PROTOCOL=http
+  # ngrok:
+  #   container_name: ngrok_tunnel
+  #   image: wernight/ngrok
+  #   ports:
+  #     - "4040:4040"
+  #   links:
+  #     - app
+  #   environment:
+  #     - NGROK_AUTH=3fVv5QDD6Wh5jDUg7CtEg_6tsUV7Nz5gy1M6vZA7myF
+  #     - NGROK_PORT=app:5000
+  #     - NGROK_PROTOCOL=http
 
   app:
     container_name: info_service
